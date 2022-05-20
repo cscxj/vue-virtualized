@@ -1,0 +1,12 @@
+{
+  "include": ["**/*.ts", "**/*.tsx", "**/*.vue"],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@core": ["core"],
+      "@core/*": ["core/*"]
+    }
+  }
+}
