@@ -1,15 +1,23 @@
 {
   "root": true,
-  "parser": "@typescript-eslint/parser",
+  "parser": "vue-eslint-parser",
   "plugins": ["@typescript-eslint"],
   "extends": [
+    "plugin:vue/vue3-essential",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier"
   ],
   "parserOptions": {
+    "parser": "@typescript-eslint/parser",
     "ecmaVersion": 2022,
-    "project": ["tsconfig.json"]
+    "extraFileExtensions": [".vue"],
+    "project": ["tsconfig.json"],
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "vue/setup-compiler-macros": true
   }
 }
